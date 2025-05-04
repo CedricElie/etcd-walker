@@ -76,3 +76,10 @@ $ etcdctl get name
 name
 cedric
 ````
+
+### View exposure
+````
+$ ss -tnlp | grep 2379
+$ netstat -tnlp | grep 2379
+tcp        0      0 127.0.0.1:2379          0.0.0.0:*               LISTEN      -
+````
