@@ -35,7 +35,7 @@ func main() {
 		log.Printf("Failed to get key 'name' : %v", err)
 	} else {
 		for _, ev := range resp.Kvs {
-			fmt.Printf("Key '%s' = '%s\n", ev.Key, ev.Value)
+			fmt.Printf("Key '%s' = '%s'\n", ev.Key, ev.Value)
 		}
 	}
 
