@@ -1,7 +1,7 @@
 # etcd-walker
 Playing around with etcd operations
 * get-etcd.sh - a script to rapidly kickstart an etcd instance on your box
-* etc-walker.go - a go program to navigate through etcd
+* etcd-walker.go - a go program to navigate through etcd
 
 
 ### Installation
@@ -52,7 +52,10 @@ User=etcd
 Type=notify
 Environment=ETCD_DATA_DIR=/var/lib/etcd
 Environment=ETCD_NAME=%m
-ExecStart=/usr/local/bin/etcd
+ExecStart=/usr/local/bin/etcd \
+        --listen-client-urls http://0.0.0.0:2379 \
+        --advertise-client-urls http://0.0.0.0:2379 \
+        --initial-advertise-peer-urls http://0.0.0.0:2379
 Restart=always
 RestartSec=10s
 LimitNOFILE=40000
