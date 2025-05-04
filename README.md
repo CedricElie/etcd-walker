@@ -14,20 +14,20 @@ Copy the the content of the get-etcd.sh script into the newly created directory
 $ chmod u+x get-etcd.sh
 $ ./get-etcd.sh
 ````
-## Copy the binaries to /usr/local/bin
+### Copy the binaries to /usr/local/bin
 ````
 $ sudo cp  ${PWD}/etcd/etcd-download-test/etcd /usr/local/bin
 $ sudo cp  ${PWD}/etcd/etcd-download-test/etcdctl /usr/local/bin
 ````
 
-## Test the working
+### Test the working
 ```
 $ etcdctl version
 etcdctl version: 3.6.0-rc.4
 API version: 3.6
 ```
 
-## Create the service
+### Create the service
 ````
 sudo mkdir /etc/etcd
 sudo mkdir /var/lib/etcd
