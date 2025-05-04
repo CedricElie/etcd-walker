@@ -1,12 +1,15 @@
 # etcd-walker
-Playing around with etcd
+Playing around with etcd operations
+* get-etcd.sh - a script to rapidly kickstart an etcd instance on your box
+* etc-walker.go - a go program to navigate through etcd
 
-## Installation
+
+### Installation
 ````
 $ mkdir ${PWD}/etcd
 ````
 
-// Copy the the content of the get-etcd.sh script into the newly created directory
+Copy the the content of the get-etcd.sh script into the newly created directory
 ````
 $ chmod u+x get-etcd.sh
 $ ./get-etcd.sh
