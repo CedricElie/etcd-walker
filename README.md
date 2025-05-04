@@ -2,15 +2,20 @@
 Playing around with etcd
 
 ## Installation
+````
 $ mkdir ${PWD}/etcd
-// Copy the the content of the get-etcd.sh script into the newly created directory
+````
 
+// Copy the the content of the get-etcd.sh script into the newly created directory
+````
 $ chmod u+x get-etcd.sh
 $ ./get-etcd.sh
-
+````
 ## Copy the binaries to /usr/local/bin
+````
 $ sudo cp  ${PWD}/etcd/etcd-download-test/etcd /usr/local/bin
 $ sudo cp  ${PWD}/etcd/etcd-download-test/etcdctl /usr/local/bin
+````
 
 ## Test the working
 ```
