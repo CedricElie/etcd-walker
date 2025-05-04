@@ -76,7 +76,11 @@ $ etcdctl get name
 name
 cedric
 ````
-
+### Open firewall
+````
+$ sudo firewall-cmd --add-port={2379/tcp,2380/tcp} --permanent
+$ sudo firewall-cmd --reload
+````
 ### View exposure
 ````
 $ ss -tnlp | grep 2379
