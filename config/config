@@ -1,0 +1,2 @@
+etcd_host: 192.168.59.180:2379
+testdatapath: "test/data.etcd"

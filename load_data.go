@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"go.etcd.io/etcd/client/v3"
+	"github.com/CedricElie/etcd-walker/config"
 )
 
 var (
@@ -19,8 +20,10 @@ var (
 )
 
 func main() {
+	cfg := config.GetConfig()
+
 	cli, err := clientv3.New(clientv3.Config {
-		Endpoints:	[]string{endpoint_url},
+		Endpoints:	[]string{cfg.ETCD_HOST},
 		DialTimeout: 5 * time.Second,
 	})
 	if err != nil {
