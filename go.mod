@@ -3,6 +3,7 @@ module github.com/CedricElie/etcd-walker
 go 1.24.2
 
 require (
+	bazil.org/fuse v0.0.0-20230120002735-62a210ff1fd5
 	github.com/spf13/viper v1.20.1
 	go.etcd.io/etcd/client/v3 v3.5.21
 )
