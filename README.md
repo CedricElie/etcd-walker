@@ -1,7 +1,24 @@
 # etcd-walker
 Playing around with etcd operations
 * get-etcd.sh - a script to rapidly kickstart an etcd instance on your box
-* etcd-walker.go - a go program to navigate through etcd
+* explore-etcd.gp - a go program to navigate through etcd
+````
+mkdir -p /tmp/etcd-mount
+go build explore-etcd.go -o explore-etcd
+./explore-etcd /tmp/etcd-mount
+
+#Explore the mounted directory
+ls /tmp/etcd-mount/
+registry
+
+ls /tmp/etcd-mount/registry
+apiextensions.k8s.io    csinodes         jobs                  pods                         roles
+apiregistration.k8s.io  daemonsets       leases                priorityclasses              secrets
+clusterrolebindings     demo.cedricelie  masterleases          prioritylevelconfigurations  serviceaccounts
+clusterroles            deployments      minions               ranges                       services
+configmaps              endpointslices   namespaces            replicasets
+controllerrevisions     flowschemas      operators.coreos.com  rolebindings
+````
 
 
 ### Installation
